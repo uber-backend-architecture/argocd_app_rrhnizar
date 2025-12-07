@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: app1
-        image: rrhnizar/app1:latest
+        image: rrhnizar/app2:latest
         ports:
         - containerPort: 80
 
