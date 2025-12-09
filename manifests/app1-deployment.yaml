@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: app1
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: app1
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: app1
-        image: rrhnizar/app1:latest
+        image: rrhnizar/app1:v1
         ports:
         - containerPort: 80
 
