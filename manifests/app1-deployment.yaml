@@ -37,32 +37,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: wil-playground
+  name: app1
   namespace: dev
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: wil-playground
+      app: app1
   template:
     metadata:
       labels:
-        app: wil-playground
+        app: app1
     spec:
       containers:
-      - name: wil-playground
-        image: rrhnizar/app1:v2
+      - name: app1
+        image: rrhnizar/app1:v1
         ports:
         - containerPort: 8888
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: wil-playground-service
+  name: app1-service
   namespace: dev
 spec:
   selector:
-    app: wil-playground
+    app: app1
   type: NodePort
   ports:
   - protocol: TCP
