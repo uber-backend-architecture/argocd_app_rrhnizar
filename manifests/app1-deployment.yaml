@@ -40,7 +40,7 @@ metadata:
   name: app1
   namespace: dev
 spec:
-  replicas: 2
+  replicas: 20
   selector:
     matchLabels:
       app: app1
